@@ -29,7 +29,7 @@ const QRCodeGenerator: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center p-8 bg-[#1e1e1e] rounded-xl shadow-xl w-[90%] max-w-[600px] border border-neutral-800 relative">
       <h1 className="text-6xl font-extrabold mb-6 text-[#646cff] text-center">QR</h1>
-      <div className="w-full mb-6 text-center px-5">
+      <div className="w-full mb-6 text-center flex flex-col items-center">
         <label htmlFor="url-input" className="block text-sm font-medium text-neutral-400 mb-2">
           Enter URL
         </label>
@@ -39,7 +39,7 @@ const QRCodeGenerator: React.FC = () => {
           value={url}
           onChange={(e) => setUrl(e.target.value)}
           placeholder="https://example.com"
-          className="w-full px-4 py-3 rounded-lg border border-neutral-700 bg-white text-black placeholder-neutral-400 focus:ring-2 focus:ring-[#646cff] focus:border-transparent outline-none transition duration-200"
+          className="w-full max-w-[calc(100%-50px)] px-4 py-3 rounded-lg border border-neutral-700 bg-white text-black placeholder-neutral-400 focus:ring-2 focus:ring-[#646cff] focus:border-transparent outline-none transition duration-200"
         />
       </div>
       
