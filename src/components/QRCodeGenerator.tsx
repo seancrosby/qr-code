@@ -27,10 +27,11 @@ const QRCodeGenerator: React.FC = () => {
   }, [url]);
 
   return (
-    <div className="flex flex-col items-center justify-center p-12 bg-[#1e1e1e] rounded-xl shadow-xl w-[90%] max-w-[600px] border border-neutral-800 relative">
-      <h1 className="text-6xl font-extrabold mb-10 text-[#646cff] text-center">QR</h1>
-      <div className="w-full mb-12 text-center flex flex-col items-center">
-        <label htmlFor="url-input" className="block text-sm font-medium text-neutral-400 mb-2">
+    <div className="flex flex-col items-center justify-center p-16 bg-[#1e1e1e] rounded-xl shadow-xl w-[90%] max-w-[600px] border border-neutral-800 relative gap-y-12">
+      <h1 className="text-6xl font-extrabold text-[#646cff] text-center">QR</h1>
+      
+      <div className="w-full text-center flex flex-col items-center">
+        <label htmlFor="url-input" className="block text-sm font-medium text-neutral-400 mb-4">
           Enter URL
         </label>
         <input
@@ -43,14 +44,14 @@ const QRCodeGenerator: React.FC = () => {
         />
       </div>
       
-      <div className="flex flex-col items-center justify-center min-h-[300px] w-full border-2 border-dashed border-neutral-700 rounded-xl bg-[#2a2a2a] py-16 px-4">
+      <div className="flex flex-col items-center justify-center min-h-[400px] w-full border-2 border-dashed border-neutral-700 rounded-xl bg-[#2a2a2a] py-20 px-4">
         {qrCodeUrl ? (
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center gap-y-10">
             <img src={qrCodeUrl} alt="Generated QR Code" className="w-[280px] h-auto rounded-lg shadow-sm" />
             <a 
               href={qrCodeUrl} 
               download="qrcode.png"
-              className="mt-10 text-white underline hover:text-gray-300 transition duration-200 font-bold text-xl"
+              className="text-white underline hover:text-gray-300 transition duration-200 font-bold text-xl"
             >
               Download PNG
             </a>
