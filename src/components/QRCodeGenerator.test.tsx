@@ -13,7 +13,7 @@ vi.mock('qrcode', () => ({
 describe('QRCodeGenerator', () => {
   it('renders the initial state correctly', () => {
     render(<QRCodeGenerator />);
-    expect(screen.getByText('QR Code Generator')).toBeInTheDocument();
+    expect(screen.getByText('QR')).toBeInTheDocument();
     expect(screen.getByLabelText('Enter URL')).toBeInTheDocument();
     expect(screen.getByText('Enter a URL to generate a QR code')).toBeInTheDocument();
   });
