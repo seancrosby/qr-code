@@ -27,7 +27,7 @@ const QRCodeGenerator: React.FC = () => {
   }, [url]);
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-800 rounded-2xl shadow-xl w-full max-w-md border border-slate-700">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-800 rounded-2xl shadow-xl w-full max-w-sm border border-slate-700">
       <h1 className="text-3xl font-bold mb-6 text-white text-center">QR Code Generator</h1>
       <div className="w-full mb-6 text-center">
         <label htmlFor="url-input" className="block text-sm font-medium text-slate-300 mb-2">
@@ -43,10 +43,10 @@ const QRCodeGenerator: React.FC = () => {
         />
       </div>
       
-      <div className="flex flex-col items-center justify-center min-h-[300px] w-full border-2 border-dashed border-slate-600 rounded-xl bg-slate-900">
+      <div className="flex flex-col items-center justify-center min-h-[300px] w-full border-2 border-dashed border-slate-600 rounded-xl bg-slate-900 p-4">
         {qrCodeUrl ? (
           <div className="flex flex-col items-center">
-            <img src={qrCodeUrl} alt="Generated QR Code" className="max-w-full h-auto rounded-lg shadow-sm" />
+            <img src={qrCodeUrl} alt="Generated QR Code" className="w-[300px] h-auto rounded-lg shadow-sm" />
             <a 
               href={qrCodeUrl} 
               download="qrcode.png"
@@ -56,7 +56,7 @@ const QRCodeGenerator: React.FC = () => {
             </a>
           </div>
         ) : (
-          <p className="text-slate-500 italic">Enter a URL to generate a QR code</p>
+          <p className="text-slate-500 italic text-center">Enter a URL to generate a QR code</p>
         )}
       </div>
     </div>
