@@ -51,7 +51,7 @@ const QRCodeGenerator: React.FC = () => {
             <a 
               href={qrCodeUrl} 
               download="qrcode.png"
-              className="text-white underline hover:text-gray-300 transition duration-200 font-bold text-xl"
+              className="!text-white underline hover:text-gray-300 transition duration-200 font-bold text-xl"
             >
               Download PNG
             </a>
