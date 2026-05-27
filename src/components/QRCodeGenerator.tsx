@@ -44,9 +44,9 @@ const QRCodeGenerator: React.FC = () => {
         />
       </div>
       
-      <div className="flex flex-col items-center justify-center min-h-[400px] w-full border-2 border-dashed border-neutral-700 rounded-xl bg-[#2a2a2a] py-20 px-4">
+      <div className="flex flex-col items-center justify-center h-[420px] w-full border-2 border-dashed border-neutral-700 rounded-xl bg-[#2a2a2a] px-4">
         {qrCodeUrl ? (
-          <div className="flex flex-col items-center gap-y-10">
+          <div className="flex flex-col items-center gap-y-6">
             <img src={qrCodeUrl} alt="Generated QR Code" className="w-[280px] h-auto rounded-lg shadow-sm" />
             <a 
               href={qrCodeUrl} 
